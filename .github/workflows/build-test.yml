@@ -48,6 +48,8 @@ jobs:
         - run: npm audit fix --force
         
   sast:
+      needs: build
+      
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v4
