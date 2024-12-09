@@ -46,3 +46,10 @@ jobs:
         - run: npm install
         - run: npm audit || true
         - run: npm audit fix --force
+        
+    sast:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: Bearer
+          uses: bearer/bearer-action@v2
